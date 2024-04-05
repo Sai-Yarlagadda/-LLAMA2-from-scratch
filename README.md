@@ -11,13 +11,12 @@ Nowadays, large language models have become increasingly prominent in various fi
   ```python run_llama.py --option prompt --batch_size 10  --train data/cfimdb-train.txt --dev data/cfimdb-dev.txt --test data/cfimdb-test.txt --l5abel-names data/cfimdb-label-mapping.json --dev_out cfimdb-dev-prompting-output.txt --test_out cfimdb-test-prompting-output.txt [--use_gpu]```
 Prompting for CFIMDB: Dev Accuracy: 0.502 (0.000) Test Accuracy: 0.213
 
-- Classification Finetuning
+- Classification Finetuning:
   ```python run_llama.py --option finetune --epochs 5 --lr 2e-5 --batch_size 80  --train data/sst-train.txt --dev data/sst-dev.txt --test data/sst-test.txt --label-names data/sst-label-mapping.json --dev_out sst-dev-finetuning-output.txt --test_out sst-test-finetuning-output.txt [--use_gpu]```
 Finetuning for SST dev acc :: 0.414 test acc :: 0.418
 
 ```python run_llama.py --option finetune --epochs 5 --lr 2e-5 --batch_size 10  --train data/cfimdb-train.txt --dev data/cfimdb-dev.txt --test data/cfimdb-test.txt --label-names data/cfimdb-label-mapping.json --dev_out cfimdb-dev-finetuning-output.txt --test_out cfimdb-test-finetuning-output.txt [--use_gpu]```
 Finetuning for CFIMDB: Dev Accuracy: 0.820 (0.115) Test Accuracy: 0.482
-
 
 
 
